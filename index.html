@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحة محمد أيمن</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- زر الرجوع -->
+    <button class="back-btn" onclick="goBack()">رجوع</button>
+    
+    <!-- ثلاث نقاط في الزاوية اليسرى العليا -->
+    <div class="menu-icon" onclick="toggleMenu()">⋮</div>
+
+    <!-- القائمة الجانبية -->
+    <div class="sidebar" id="sidebar">
+        <button onclick="showPage(1)">قره عينى</button>
+        <button onclick="showPage(2)">أم رحمة</button>
+        <button onclick="showPage(3)">مريم</button>
+        <button onclick="showSidraPage()">سدره</button>
+        <button onclick="showOmarPage()">عمر</button>
+    </div>
+
+    <div class="container">
+        <h1 class="name-header">
+            <span class="green">Mohamed</span> 
+            <span class="gray">Aymen</span>
+        </h1>
+
+        <!-- الأزرار للتنقل بين الصفحات -->
+        <div class="buttons">
+            <button class="page-btn" onclick="showPage(1)">قره عينى</button>
+            <button class="page-btn" onclick="showPage(2)">أم رحمة</button>
+            <button class="page-btn" onclick="showPage(3)">مريم</button>
+        </div>
+
+        <!-- الصفحة الأولى: رسالة لرحمة -->
+        <div class="page" id="page1">
+            <div class="message-container">
+                <h2>رسالة لرحمة</h2>
+                <p>إلى رحمة، أنتِ مصدر النور في حياتي، وقلبك هو أغلى ما لدي. أحبك بكل ما أملك.</p>
+            </div>
+        </div>
+
+        <!-- الصفحة الثانية: رسالة لأم رحمة -->
+        <div class="page" id="page2">
+            <div class="message-container">
+                <h2>رسالة لأم رحمة</h2>
+                <p>إلى أم رحمة، شكرًا لكِ على حبك ودعمك المتواصل. أنتِ منارة الحكمة والحب.</p>
+            </div>
+        </div>
+
+        <!-- الصفحة الثالثة: رسالة لمريم -->
+        <div class="page" id="page3">
+            <div class="message-container">
+                <h2>رسالة لمريم</h2>
+                <p>مريم، أعتذر بصدق إذا شعرتِ أنني أزعجتكِ. أنتِ دائمًا ذات قيمة كبيرة في حياتي.</p>
+                <div class="small-buttons">
+                    <button class="small-btn" onclick="showSidraPage()">سدره</button>
+                    <button class="small-btn" onclick="showOmarPage()">عمر</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- الصفحة لسدره -->
+        <div class="page" id="sidraPage">
+            <div class="message-container">
+                <h2>رسالة لسدره</h2>
+                <p>سدره، أبدعي واستمتعي بدراستك. العالم بانتظار نجاحكِ الباهر.</p>
+            </div>
+        </div>
+
+        <!-- الصفحة لعمر -->
+        <div class="page" id="omarPage">
+            <div class="message-container">
+                <h2>رسالة لعمر</h2>
+                <p>عمر، أنتَ بطلنا الصغير! لا تتوقف عن الإبداع والتميز!</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

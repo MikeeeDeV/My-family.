@@ -1,0 +1,189 @@
+/* إعدادات عامة */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff; /* لون الخلفية */
+    font-family: 'Cairo', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    transition: background-color 1.5s ease-in-out;
+}
+
+/* زر الرجوع */
+.back-btn {
+    position: absolute;
+    top: 20px;
+    right: 60px;
+    background-color: #ff6ec4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+/* ثلاث نقاط */
+.menu-icon {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* القائمة الجانبية */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+    transition: left 0.3s ease;
+}
+
+.sidebar button {
+    background: none;
+    color: white;
+    border: none;
+    margin: 10px;
+    font-size: 1.2em;
+    cursor: pointer;
+    text-align: left;
+    width: 100%;
+    padding: 10px;
+}
+
+.sidebar button:hover {
+    background-color: #444;
+}
+
+/* عنوان الصفحة */
+h1.name-header {
+    font-size: 3em;
+    margin-bottom: 20px;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+h1 .green {
+    color: #32cd32; /* أخضر زاهي */
+}
+
+h1 .gray {
+    color: #696969; /* رمادي غامق */
+}
+
+.buttons {
+    margin-bottom: 40px;
+}
+
+.page-btn {
+    background: linear-gradient(145deg, #ff6ec4, #7873f5); /* تدرج لونين وردي */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    margin: 0 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1.2em;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.page-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+    animation: fadeIn 1s ease;
+}
+
+.message-container {
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px;
+    margin: 20px auto;
+    width: 80%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    animation: slideUp 1s ease-in-out;
+}
+
+.message-container h2 {
+    color: #ff69b4; /* لون وردي للعنوان */
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.message-container p {
+    color: #333;
+    font-size: 1.5em;
+    line-height: 1.6;
+}
+
+.small-buttons {
+    margin-top: 20px;
+}
+
+.small-btn {
+    background-color: #ff69b4; /* لون وردي للأزرار الصغيرة */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.small-btn:hover {
+    background-color: #ff1493; /* لون أغمق عند التمرير */
+}
+
+/* انيميشن القلب */
+@keyframes heart-fall {
+    0% { top: -50px; opacity: 1; transform: scale(1); }
+    50% { transform: rotate(60deg) scale(1.1); }
+    100% { top: 100vh; opacity: 0; transform: scale(0.9); }
+}
+
+.heart {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    transform: rotate(45deg);
+    animation: heart-fall 5s infinite;
+    border-radius: 50%;
+    top: 0;
+    left: 50%;
+}
+
+/* انيميشنات */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: scale(0.95); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeInDown {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
